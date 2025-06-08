@@ -1,4 +1,3 @@
-// src/AppContext.js
 import React, { createContext, useState, useEffect } from 'react';
 import { loadModels, generateSummary, generateMCQs, generateFillInTheBlanks, areModelsLoaded} from "../utils/aiUtils"
 

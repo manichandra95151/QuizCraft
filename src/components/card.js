@@ -163,7 +163,6 @@ function MCQComponent({ mcqs, theme }) {
 }
 
 function FillInTheBlanksComponent({ content, theme }) {
-  console.log("Received content:", content);
   const [showAnswers, setShowAnswers] = useState({});
   
   // Parse the content to extract sentences with blanks and their answers

@@ -15,9 +15,6 @@ function App() {
     theme,
   } = useContext(AppContext);
 
-   console.log("isGenerating:", isGenerating);
-  console.log("generating state:", generating);
-
   return (
     <div className={`min-h-screen transition-colors duration-300 overflow-y-hidden ${theme === 'light' ? 'bg-gray-50' : 'bg-gray-900'}`}>
       {/* Model Loading Modal */}

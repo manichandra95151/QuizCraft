@@ -6,8 +6,6 @@ import { AppContext } from '../context/AppContext';
 const ResultsSection = () => {
    const { results, generating, theme,isGenerating } = useContext(AppContext);
   const hasResults = results.summary || results.mcqs.length > 0 || results.fillblanks;
-  // console.log(generating);
-  // console.log(results);
 
   return (
               <div className="space-y-6">

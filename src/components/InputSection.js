@@ -1,5 +1,3 @@
-// src/components/InputSection.jsx
-
 import { Sparkles, Upload, Loader2} from 'lucide-react';
 import DownloadButton from './downloadContent';
 import React, { useRef,useContext } from 'react';

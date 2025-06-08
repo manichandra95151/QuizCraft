@@ -2,16 +2,12 @@ import React from 'react';
 import { Loader2, FileText, HelpCircle, Edit } from 'lucide-react';
 
 const GenerationLoader = ({ generating, theme = 'light' }) => {
-  console.log("GenerationLoader rendered with:", { generating, theme });
 
-  // Add safety check for generating prop
   if (!generating || typeof generating !== 'object') {
-    console.log("Invalid generating prop:", generating);
     return null;
   }
 
   const getGenerationStage = () => {
-    console.log("Checking generation stages:", generating);
     
     if (generating.summary === true) {
       return {
@@ -52,18 +48,13 @@ const GenerationLoader = ({ generating, theme = 'light' }) => {
   };
 
   const currentStage = getGenerationStage();
-  console.log("Current stage:", currentStage);
   
-  // This should never be null now, but keeping as safety
   if (!currentStage) {
-    console.log("No current stage, returning null");
     return null;
   }
 
   const Icon = currentStage.icon;
   const progressPercentage = (currentStage.stage / currentStage.total) * 100;
-
-  console.log("Rendering GenerationLoader with stage:", currentStage.title);
 
   return (
     <div className="fixed inset-0 z-[9999] bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4">
